@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building a Strong Engineering Culture - Blog Post</title> 
+    <link rel="stylesheet" href="blog.css">
+    
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="site-logo">
+                <a href="#">UnderTheHood</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Articles</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container main-area">
+
+        <main class="content-column">
+            <article class="full-post">
+
+                <header class="post-header">
+                    <div class="post-tags">
+                        <a href="#">Loadbalancing</a>
+                        <a href="#">Java</a>
+                    </div>
+                    <h1 class="post-title">Bulding a Load Balancer Day 01</h1>
+                    <div class="post-meta">
+                        By <span class="author">Sahariar Alam Khandoker</span> on <span class="date">Jan 1st, 2025</span>
+                        </div>
+                     </header>
+
+                <div class="post-content">
+                    <p>In this series of articles we are going to build a simple load balancer. With following features:</p>
+                    <ul>
+                        <li><strong>Balancing load accross multiple nodes</strong></li>
+                        <li><strong>Can use different algorightm for load banaling</strong></li>
+                        <li><strong>Can add headers for both request and response</strong></li>
+                        <li><strong>Can log request and response timings</strong></li>
+                    </ul>
+
+                    <h2>Bulding a echo server</h2>
+                    <p>We will first start with building a simple echo server that returns what is received</p>
+
+                    <pre><code>// Example of a constructive code review comment
+// Instead of: "This logic is wrong."
+// Try: "Could you clarify the reasoning behind this approach?
+// I'm wondering if considering edge case X might simplify it."
+
+function calculateTotal(items) {
+  let total = 0;
+  for (const item of items) {
+    // Ensure item price is a valid number before adding
+    if (typeof item.price === 'number' && !isNaN(item.price)) {
+       total += item.price;
+    } else {
+       console.warn(`Invalid price found for item: ${item.name}`);
+    }
+  }
+  return total;
+}</code></pre>
+
+                </div>
+
+            </article>
+        </main>
+
+        <aside class="sidebar">
+            <div class="widget">
+                <h3 class="widget-title">Topics</h3>
+                <ul>
+                    <li><a href="#">Bulding Load Balancer Day 02</a></li>
+                    <li><a href="#">Bulding Load Balancer Day 03</a></li>
+                    <li><a href="#">Bulding Load Balancer Day 04</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div> 
+    
+    <footer class="site-footer">
+        <div class="container">
+             <div class="footer-logo">
+                 <a href="#">Under<span>The</span><span>Hood</span></a>
+             </div>
+            <div class="footer-copyright">
+                
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

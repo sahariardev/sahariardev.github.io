@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building a Strong Engineering Culture - Blog Post</title> 
+    <link rel="stylesheet" href="blog.css">
+    
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="site-logo">
+                <a href="#">Under<span>The</span> Hood</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Articles</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container main-area">
+
+        <main class="content-column">
+            <article class="full-post">
+
+                <header class="post-header">
+                    <div class="post-tags">
+                        <a href="#">Loadbalancing</a>
+                        <a href="#">Java</a>
+                    </div>
+                    <h1 class="post-title">Bulding a Load Balancer</h1>
+                    <div class="post-meta">
+                        By <span class="author">Sahariar Alam Khandoker</span> on <span class="date">Jan 1st, 2025</span>
+                        </div>
+                     </header>
+
+                <div class="post-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.</p>
+
+                    <p>Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede.</p>
+
+                    <h2>Key Pillars of a Thriving Culture</h2>
+                    <p>Establishing a positive and productive environment requires focus on several core areas. We believe these are fundamental:</p>
+                    <ul>
+                        <li><strong>Collaboration and Communication:</strong> Encouraging open dialogue and teamwork. Tools like <code>Slack</code> or <code>Microsoft Teams</code> are essential, but the culture must support their effective use.</li>
+                        <li><strong>Learning and Development:</strong> Providing opportunities for growth, mentorship, and skill acquisition.</li>
+                        <li><strong>Psychological Safety:</strong> Creating a space where team members feel safe to take risks, ask questions, and admit mistakes without fear of retribution.</li>
+                        <li><strong>Autonomy and Trust:</strong> Empowering engineers to make decisions and own their work.</li>
+                    </ul>
+
+                     <img src="https://via.placeholder.com/600x300/eeeeee/777777?text=Collaboration+Diagram" alt="Collaboration Diagram">
+
+
+                    <h3>Fostering Psychological Safety</h3>
+                    <p>This is often cited as the most critical element. Amy Edmondson's research highlights its importance. Here's how to cultivate it:</p>
+                    <ol>
+                        <li>Lead by example: Leaders should admit their own mistakes.</li>
+                        <li>Encourage questions: Frame work as learning problems, not execution problems.</li>
+                        <li>Respond productively: Avoid blame and focus on solutions.</li>
+                    </ol>
+
+                    <blockquote>
+                        <p>"Psychological safety isn't about being nice. It's about giving candid feedback, openly admitting mistakes, and learning from each other."</p>
+                        <footer>— Amy Edmondson</footer>
+                    </blockquote>
+
+                    <h2>Implementing Code Review Best Practices</h2>
+                    <p>Code reviews are a cornerstone of quality and knowledge sharing. Ensure the process is constructive, not confrontational.</p>
+
+                    <pre><code>// Example of a constructive code review comment
+// Instead of: "This logic is wrong."
+// Try: "Could you clarify the reasoning behind this approach?
+// I'm wondering if considering edge case X might simplify it."
+
+function calculateTotal(items) {
+  let total = 0;
+  for (const item of items) {
+    // Ensure item price is a valid number before adding
+    if (typeof item.price === 'number' && !isNaN(item.price)) {
+       total += item.price;
+    } else {
+       console.warn(`Invalid price found for item: ${item.name}`);
+    }
+  }
+  return total;
+}</code></pre>
+
+                    <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.</p>
+
+                </div> <section id="comments">
+                    <h2>Comments</h2>
+                    <p>(Comments feature would be implemented here using JavaScript and a backend.)</p>
+                    </section>
+
+            </article> \
+        </main>
+
+        <aside class="sidebar">
+            <div class="widget search-widget">
+                 <h3 class="widget-title">Search</h3>
+                 <form action="#">
+                     <input type="search" placeholder="Search Blog...">
+                 </form>
+            </div>
+            <div class="widget">
+                <h3 class="widget-title">Topics</h3>
+                <ul>
+                    <li><a href="#">Engineering</a></li>
+                    <li><a href="#">Culture</a></li>
+                    <li><a href="#">Data Science</a></li>
+                    <li><a href="#">AI & Machine Learning</a></li>
+                    <li><a href="#">Observability</a></li>
+                    <li><a href="#">Career Development</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </div>
+            <div class="widget">
+                <h3 class="widget-title">Recent Posts</h3>
+                <ul>
+                    <li><a href="#">Building a Strong Engineering Culture</a></li>
+                    <li><a href="#">Podcast 325: The Evolution of Observability</a></li>
+                    <li><a href="#">How AI is Changing the Landscape of Software Development</a></li>
+                     <li><a href="#">Tips for Effective Remote Collaboration</a></li>
+                </ul>
+            </div>
+            <div class="widget">
+                <h3 class="widget-title">Stack Overflow for Teams</h3>
+                <p>A private knowledge sharing platform for your team. <a href="#">Learn More</a></p>
+            </div>
+        </aside>
+
+    </div> 
+    
+    <footer class="site-footer">
+        <div class="container">
+             <div class="footer-logo">
+                 <a href="#">Under<span>The</span><span>Hood</span></a>
+             </div>
+            <div class="footer-copyright">
+                
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
