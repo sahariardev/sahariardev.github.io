@@ -41,32 +41,57 @@
                 <div class="post-content">
                     <p>In this series of articles we are going to build a simple load balancer. With following features:</p>
                     <ul>
-                        <li><strong>Balancing load accross multiple nodes</strong></li>
-                        <li><strong>Can use different algorightm for load banaling</strong></li>
-                        <li><strong>Can add headers for both request and response</strong></li>
-                        <li><strong>Can log request and response timings</strong></li>
+                        <li><strong>Balance load accross multiple nodes</strong></li>
+                        <li><strong>Use different algorightm for load banaling</strong></li>
+                        <li><strong>Add headers for both request and response</strong></li>
+                        <li><strong>Log request and response timings</strong></li>
                     </ul>
 
                     <h2>Bulding a echo server</h2>
                     <p>We will first start with building a simple echo server that returns what is received</p>
 
-                    <pre><code>// Example of a constructive code review comment
-// Instead of: "This logic is wrong."
-// Try: "Could you clarify the reasoning behind this approach?
-// I'm wondering if considering edge case X might simplify it."
+                    <pre><code>
+public class Main {
+    public static void main(String[] args) {
+        try (ServerSocket serverSocket = new ServerSocket(8888);
+             ExecutorService executorService = Executors.newCachedThreadPool()) {
 
-function calculateTotal(items) {
-  let total = 0;
-  for (const item of items) {
-    // Ensure item price is a valid number before adding
-    if (typeof item.price === 'number' && !isNaN(item.price)) {
-       total += item.price;
-    } else {
-       console.warn(`Invalid price found for item: ${item.name}`);
+            while (true) {
+                Socket socket = serverSocket.accept();
+                executorService.execute(() -> {
+
+                    try (InputStream inputStream = socket.getInputStream();
+                            OutputStream outputStream = socket.getOutputStream()) {
+
+                        byte[] requestBytes = inputStream.readAllBytes();
+                        String request = new String(requestBytes, StandardCharsets.UTF_8);
+
+                        System.out.println("Received Request: \n\n"+request);
+
+                        outputStream.write(requestBytes);
+
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+
+                });
+            }
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
-  }
-  return total;
 }</code></pre>
+
+                    <p>In the above code we are using a <code>ServerSocket</code> to listen on port 8888. When a request comes in we are creating a new thread using <code>ExecutorService</code>. The request is read from the input stream and written back to the output stream.</p>
+
+                    <h2>Testing the echo server</h2>
+                    <p>We can test the echo server using <code>netcat</code></p>
+                    <pre><code>echo "hello world" | nc 127.0.0.1 8888 </code></pre>
+                    <p>This should return "hello world"</p>
+
+                    <p>You can find this code here</p>
+                    <pre><code>https://github.com/sahariardev/building-simple-load-balancer/blob/master/day01/src/main/java/org/sahariardev/Main.java</code></pre>
 
                 </div>
 
