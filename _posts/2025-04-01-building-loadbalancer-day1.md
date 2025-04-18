@@ -1,5 +1,5 @@
 ---
-title: Bulding a load balancer (day one)
+title: Building a load balancer (day one)
 date: 2025-04-01 12:00:00 +600
 categories: [technical]
 tags: [java, loadbalancer]
@@ -13,7 +13,7 @@ In this series of articles we are going to build a simple load balancer. With fo
 * <strong>Log request and response timings</strong>
 
 
-## Bulding a echo server
+## Building a echo server
 We will first start with building a simple echo server that returns what is received
 
 ```java

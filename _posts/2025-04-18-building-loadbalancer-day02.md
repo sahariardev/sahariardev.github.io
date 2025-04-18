@@ -1,11 +1,11 @@
 ---
-title: Bulding a load balancer (day two)
+title: Building a load balancer (day two)
 date: 2025-04-18 15:18:00 +600
 categories: [technical]
 tags: [java, loadbalancer]
 ---
 
-## Bulding the load balancer
+## Building the load balancer
 
 We will implement very simple loadbanacer that takes a request, select a server using round robin method and forwad the request to that server
 
